@@ -1,25 +1,30 @@
 $(document).ready(function () {
-    
-    // This will retrieve the html with body text of the selected html element
-    let temp1 = $('#box').html()
-    console.log(temp1);
 
+    // Set the text of an element
+    $("#myDiv").text("Hello World!");
 
-    // This is will retrieve the body text only of the selected html element
-    let temp2 = $('#box').text()
-    console.log(temp2);
+    // This will change: <div id="myDiv"></div>
+    // To: <div id="myDiv">Hello World!</div>
 
-    // This will retrieve us the attribute names of the selected html element
-    let temp3 = $('#box').attr('class');
-    console.log(temp3)
+    // Set HTML content (can include tags)
+    $("#container").html("<p>New <strong>content</strong></p>");
 
-    $('#myForm').submit(function (e) { 
-        e.preventDefault();
-        
-        let name = $('#name').val();
-        let email = $('#email').val();
+    // This will change: <div id="container"></div>
+    // To: <div id="container"><p>New <strong>content</strong></p></div>
 
-        alert(`My family name is ${name} and My email is ${email}`);
+    // Set value of an input field
+    $("#username").val("john_doe");
+
+    // Set value of a dropdown
+    $("#colors").val("blue");
+
+    // Set a single attribute
+    $("#myImage").attr("src", "new-image.jpg");
+
+    // Set multiple attributes at once
+    $("#myLink").attr({
+        "href": "https://example.com",
+        "title": "Visit Example"
     });
 
 });
