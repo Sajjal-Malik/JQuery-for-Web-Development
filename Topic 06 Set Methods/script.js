@@ -1,30 +1,25 @@
 $(document).ready(function () {
+    
+    // This will set the html with body text of the selected html element
+    $('#myBtn').on('click', function () {
+        $('#box h3').html("Change the  <strong><em>HTML TEXT</em></strong> of H2 Element");
+    });
 
-    // Set the text of an element
-    $("#myDiv").text("Hello World!");
+    // This will set the body text of the selected html element
+    // $('#myBtn').on('click', function () {
+    //     $('#box h3').text("Change the  <strong><em>HTML TEXT</em></strong> of H2 Element");
+    // });
+    
+    // This will retrieve us the attribute names of the selected html element 
+    $('#myBtn').on('click', function () {
+        $('#box').attr('class', 'setPurple');
+        $('#box').css('color', 'white');
+    });
+    
+    $('#myBtn').on('click', function () {
+        $('#name').val("Malik Bhatti");
+        $('#email').val("malik@gmail.com");
 
-    // This will change: <div id="myDiv"></div>
-    // To: <div id="myDiv">Hello World!</div>
-
-    // Set HTML content (can include tags)
-    $("#container").html("<p>New <strong>content</strong></p>");
-
-    // This will change: <div id="container"></div>
-    // To: <div id="container"><p>New <strong>content</strong></p></div>
-
-    // Set value of an input field
-    $("#username").val("john_doe");
-
-    // Set value of a dropdown
-    $("#colors").val("blue");
-
-    // Set a single attribute
-    $("#myImage").attr("src", "new-image.jpg");
-
-    // Set multiple attributes at once
-    $("#myLink").attr({
-        "href": "https://example.com",
-        "title": "Visit Example"
     });
 
 });
