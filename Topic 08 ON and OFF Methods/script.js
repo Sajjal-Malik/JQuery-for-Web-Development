@@ -19,11 +19,7 @@ $(document).ready(function () {
     });
 
     $('#newBtn').click(function () {
-        $('#myBtn').off({
-            'click': function(){
-                $(this).css('color', 'yellow');
-            }
-        });
+        $('#myBtn').off("click");
     });
 
 });
