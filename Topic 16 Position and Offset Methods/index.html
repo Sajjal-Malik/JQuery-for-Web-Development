@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jQuery Position vs Offset</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                padding: 20px;
+                background-color: #f0f8ff;
+                color: #333;
+            }
+
+            .container {
+                max-width: 600px;
+                margin: 0 auto;
+                background-color: white;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            h1 {
+                color: #2c3e50;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .explanation {
+                background-color: #f8f9fa;
+                padding: 15px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+                border-left: 4px solid #3498db;
+            }
+
+            .highlight {
+                background-color: yellow;
+                color: black;
+                padding: 2px 5px;
+                border-radius: 3px;
+                font-weight: bold;
+            }
+
+            .parent-element {
+                position: relative;
+                padding: 40px;
+                background-color: #e8f4fc;
+                border: 2px solid #3498db;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+
+            .target-element {
+                width: 100px;
+                height: 60px;
+                background-color: #e74c3c;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all 0.3s;
+                font-weight: bold;
+            }
+
+            .target-element:hover {
+                background-color: #c0392b;
+                transform: scale(1.05);
+            }
+
+            .results {
+                display: flex;
+                justify-content: space-between;
+                gap: 15px;
+                margin-bottom: 20px;
+            }
+
+            .result-box {
+                flex: 1;
+                padding: 15px;
+                border-radius: 5px;
+                background-color: #f8f9fa;
+                border-top: 4px solid #2ecc71;
+            }
+
+            .result-box:nth-child(2) {
+                border-top-color: #e67e22;
+            }
+
+            .result-box h3 {
+                margin-top: 0;
+                color: #2c3e50;
+            }
+
+            button {
+                background-color: #3498db;
+                color: white;
+                border: none;
+                padding: 12px 20px;
+                border-radius: 4px;
+                cursor: pointer;
+                font-size: 16px;
+                width: 100%;
+                transition: background-color 0.3s;
+            }
+
+            button:hover {
+                background-color: #2980b9;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>jQuery Position vs Offset</h1>
+
+            <div class="explanation">
+                <p><span class="highlight">position()</span> - Relative to the parent element</p>
+                <p><span class="highlight">offset()</span> - Relative to the document</p>
+            </div>
+
+            <div class="parent-element">
+                <div class="target-element" id="target">
+                    Click me!
+                </div>
+            </div>
+
+            <div class="results">
+                <div class="result-box">
+                    <h3>Position Values</h3>
+                    <p>Left: <span id="position-left">0</span>px</p>
+                    <p>Top: <span id="position-top">0</span>px</p>
+                </div>
+
+                <div class="result-box">
+                    <h3>Offset Values</h3>
+                    <p>Left: <span id="offset-left">0</span>px</p>
+                    <p>Top: <span id="offset-top">0</span>px</p>
+                </div>
+            </div>
+
+            <button id="calculate-btn">Calculate Values</button>
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+
+</html>
