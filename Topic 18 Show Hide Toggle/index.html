@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simple jQuery Show/Hide/Toggle</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>jQuery Show/Hide/Toggle Demo</h1>
+
+            <div class="button-container">
+                <button class="show-btn" id="showBtn">Show Content</button>
+                <button class="hide-btn" id="hideBtn">Hide Content</button>
+                <button class="toggle-btn" id="toggleBtn">Toggle Content</button>
+            </div>
+
+            <div class="content-box" id="contentBox">
+                <h2>Welcome to jQuery Effects!</h2>
+                <p>This content can be shown, hidden, or toggled using jQuery methods.</p>
+                <p>Try clicking the buttons above to see the effects in action.</p>
+            </div>
+
+            <div class="code-example">
+                <pre><code>// Basic jQuery syntax for show/hide/toggle
+                    $("#showBtn").click(function() {
+                    $("#contentBox").show();
+                });
+
+                $("#hideBtn").click(function() {
+                $("#contentBox").hide();
+                });
+
+                $("#toggleBtn").click(function() {
+                $("#contentBox").toggle();
+                });</code></pre>
+            </div>
+
+            <div class="footer">
+                <p>Simple jQuery Example - Show/Hide/Toggle</p>
+            </div>
+        </div>
+
+        <!-- Include jQuery from CDN -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <!-- External JavaScript -->
+        <script src="./script.js"></script>
+    </body>
+
+</html>
